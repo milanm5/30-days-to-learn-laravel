@@ -16,5 +16,9 @@ class Job extends Model {
 
     // ovde navodimo kolone koje mogu biti popunjene od strane korisnika
     protected $fillable = ['title', 'salary'];
+
+    public function employer() {
+        return $this->belongsTo(Employer::class);
+    }
 }
 ?>
